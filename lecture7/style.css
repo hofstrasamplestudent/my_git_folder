@@ -1,0 +1,73 @@
+/* === 1. Global Styling === */
+body { /* Line 1 */
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* === 2. Box Model Demonstration === */
+.box { /* Line 10 */
+  width: 300px;
+  padding: 20px;  /* Space inside the box */
+  border: 3px solid black; /* Defines box edge */
+  margin: 20px; /* Space outside the box */
+  background-color: lightblue;
+}
+
+/* === 3. Box Dimensions === */
+.fixed-box { /* Line 19 */
+  width: 200px;
+  height: 100px;
+  background-color: lightcoral;
+  text-align: center;
+  line-height: 100px;
+}
+
+.fluid-box { /* Line 25 */
+  width: 50%; /* Percentage-based width */
+  height: 100px;
+  background-color: lightgreen;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* === 4. Border, Padding, and Margin === */
+.border-box { /* Line 33 */
+  border: 5px dashed red; /* Demonstrates border */
+}
+
+.padding-box { /* Line 38 */
+  padding: 20px; /* Space inside the element */
+  background-color: lightyellow;
+}
+
+.margin-box { /* Line 43 */
+  margin: 30px; /* Space outside the element */
+  background-color: lightgray;
+}
+
+/* === 5. Overflow Property === */
+.overflow-box { /* Line 48 */
+  width: 250px;
+  height: 80px;
+  border: 2px solid black;
+  overflow: scroll; /* Can change to visible, hidden, or auto */
+  background-color: white;
+}
+
+/* === 6. Display & Visibility === */
+.inline-box { /* Line 58 */
+  display: inline; /* Stays inline with other elements */
+  background-color: pink;
+}
+
+.block-box { /* Line 63 */
+  display: block; /* Takes full width */
+  background-color: skyblue;
+}
+
+.hidden-box { /* Line 68 */
+  visibility: hidden; /* The element is still there but invisible */
+  background-color: red;
+}
