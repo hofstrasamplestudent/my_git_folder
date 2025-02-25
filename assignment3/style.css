@@ -1,40 +1,73 @@
-/*
-  style.css - Assignment 3 (Chapter 5 focus)
-  ----------------------------------------------------------
-  References (Chapter 5):
-    - External vs. Internal vs. Inline CSS
-    - Cascade (specificity, order)
-    - Inheritance (how child elements get parent properties)
-*/
-
-/* Example for body 
-   (this might demonstrate inheritance if your <p> or <h1> 
-   doesn't override these styles) 
-*/
+/* Global Styling */
 body {
-  /* TODO: Choose a color or font family from Chapter 5 examples, 
-           explain in a comment why you picked it. */
-  color: #333;
   font-family: Arial, sans-serif;
-  /* e.g. background-color: #f5f5f5; (optional) */
+  margin: 20px;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
-/* Example: style your <h1> externally here */
-h1 {
-  /* TODO: pick a color or text-related property 
-           that might compete with your inline or internal CSS. */
+/* Box Model Demonstration */
+.box {
+  width: 300px;
+  padding: 20px;  /* Space inside the box */
+  border: 3px solid black; /* Defines box edge */
+  margin: 20px; /* Space outside the box */
+  background-color: lightblue;
 }
 
-/* 
-  Add more rules if desired:
-  - Paragraphs (p) 
-  - Footer 
-  - etc. 
-*/
+/* Box Dimensions */
+.fixed-box {
+  width: 200px;
+  height: 100px;
+  background-color: lightcoral;
+  text-align: center;
+  line-height: 100px;
+}
 
-/* 
-  For demonstration:
-  - Show which rules get overridden by your internal <style> block
-  - Which might get overridden by inline styles
-  - Comment your observations about the cascade and inheritance
-*/
+.fluid-box {
+  width: 50%; /* Percentage-based width */
+  height: 100px;
+  background-color: lightgreen;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* Border, Padding, and Margin */
+.border-box {
+  border: 5px dashed red; /* Demonstrates border */
+}
+
+.padding-box {
+  padding: 20px; /* Space inside the element */
+  background-color: lightyellow;
+}
+
+.margin-box {
+  margin: 30px; /* Space outside the element */
+  background-color: lightgray;
+}
+
+/* Overflow Property */
+.overflow-box {
+  width: 250px;
+  height: 80px;
+  border: 2px solid black;
+  overflow: scroll; /* Can change to visible, hidden, or auto */
+  background-color: white;
+}
+
+/* Display & Visibility */
+.inline-box {
+  display: inline; /* Stays inline with other elements */
+  background-color: pink;
+}
+
+.block-box {
+  display: block; /* Takes full width */
+  background-color: skyblue;
+}
+
+.hidden-box {
+  visibility: hidden; /* The element is still there but invisible */
+  background-color: red;
+}
