@@ -66,3 +66,27 @@
     border-radius: 5px;
     text-align: center;
 }
+/* Block-level div for explanation */
+.explanation-box {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Styled unordered list */
+.explanation-list {
+    background: #e6f7ff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #0077cc;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.explanation-list ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
