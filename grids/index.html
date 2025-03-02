@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="styles.css"> <!-- Linking external CSS -->
 </head>
 <body>
-    <!-- Grid container: This is the main structure (House Blueprint) -->
+    <!-- Grid container: Defines the main structure -->
     <div class="container">
         
         <!-- Header: Spans across both columns -->
         <div class="header">
-            🏠 House Structure (Grid Header) <br>
-            (This spans across both columns in the grid)
+            🏠 Grid Header (Spans 2 Columns) <br>
             <pre>
 /* Header spans across both columns */
 .header {
@@ -27,10 +26,9 @@
             </pre>
         </div>
 
-        <!-- Sidebar: Fixed column for navigation or extra content -->
+        <!-- Sidebar (Static Grid Area) -->
         <div class="sidebar">
-            📜 Sidebar <br>
-            (This stays on the left side in a smaller column)
+            📜 Sidebar - Static Grid Area <br>
             <pre>
 /* Sidebar section */
 .sidebar {
@@ -42,53 +40,59 @@
             </pre>
         </div>
 
-        <!-- Content: A grid area that contains two Flexbox sections -->
+        <!-- Main Content: Uses Flexbox Inside Grid -->
         <div class="content">
             
-            <!-- Left Flexbox Section -->
-            <div class="flexbox-left">
-                <p>🛋️ Flexbox Left (Vertical Stack)</p>
-                <p>📦 Box 1</p>
-                <p>📦 Box 2</p>
-                
-                <!-- Displaying the CSS for this section -->
+            <!-- Flexbox Section 1: Horizontal Navbar -->
+            <div class="flexbox-navbar">
+                <p>🔗 Navbar Example (Flexbox Row)</p>
+                <button>🏠 Home</button>
+                <button>📄 About</button>
+                <button>📞 Contact</button>
+
+                <!-- Displaying CSS -->
                 <pre>
-/* Flexbox Left Section: Stacks items vertically */
-.flexbox-left {
+/* Flexbox Navbar: Aligns buttons in a row */
+.flexbox-navbar {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: space-between;
     background: #ffcccc;
-    padding: 20px;
-    flex: 1;
+    padding: 15px;
     border: 3px solid red;
     border-radius: 10px;
-    min-height: 200px;
 }
                 </pre>
             </div>
 
-            <!-- Right Flexbox Section -->
-            <div class="flexbox-right">
-                <p>🖼️ Flexbox Right (Horizontal Alignment)</p>
-                <p>🔳 Image Block</p>
-                <p>📝 Text Block</p>
+            <!-- Flexbox Section 2: Card Layout -->
+            <div class="flexbox-cards">
+                <div class="card">🖼️ Image 1</div>
+                <div class="card">🖼️ Image 2</div>
+                <div class="card">🖼️ Image 3</div>
 
-                <!-- Displaying the CSS for this section -->
+                <!-- Displaying CSS -->
                 <pre>
-/* Flexbox Right Section: Aligns items in a row */
-.flexbox-right {
+/* Flexbox Cards: Distributes items evenly */
+.flexbox-cards {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
     background: #ccffcc;
     padding: 20px;
-    flex: 1;
     border: 3px solid green;
     border-radius: 10px;
-    min-height: 200px;
+}
+
+/* Individual card items */
+.card {
+    background: white;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
 }
                 </pre>
             </div>
