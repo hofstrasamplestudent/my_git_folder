@@ -50,6 +50,7 @@
     flex: 1; /* Takes up equal space in the content section */
     border: 3px solid red;
     border-radius: 10px;
+    min-height: 200px; /* Ensures both flexboxes have the same height */
 }
 
 /* 📌 FLEXBOX RIGHT: Aligns items HORIZONTALLY */
@@ -63,6 +64,7 @@
     flex: 1; /* Takes up equal space in the content section */
     border: 3px solid green;
     border-radius: 10px;
+    min-height: 200px; /* Ensures both flexboxes have the same height */
 }
 
 /* 📌 FLEXBOX ITEMS (Boxes inside Flexbox sections) */
@@ -82,4 +84,5 @@ pre {
     font-size: 14px;
     border-radius: 5px;
     overflow-x: auto;
+    white-space: pre-wrap; /* Ensures it wraps in small screens */
 }

@@ -14,12 +14,32 @@
         <div class="header">
             🏠 House Structure (Grid Header) <br>
             (This spans across both columns in the grid)
+            <pre>
+/* Header spans across both columns */
+.header {
+    grid-column: span 2;
+    background-color: #f8b400;
+    text-align: center;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+            </pre>
         </div>
 
         <!-- Sidebar: Fixed column for navigation or extra content -->
         <div class="sidebar">
             📜 Sidebar <br>
             (This stays on the left side in a smaller column)
+            <pre>
+/* Sidebar section */
+.sidebar {
+    background: lightgray;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+            </pre>
         </div>
 
         <!-- Content: A grid area that contains two Flexbox sections -->
@@ -44,6 +64,7 @@
     flex: 1;
     border: 3px solid red;
     border-radius: 10px;
+    min-height: 200px;
 }
                 </pre>
             </div>
@@ -67,6 +88,7 @@
     flex: 1;
     border: 3px solid green;
     border-radius: 10px;
+    min-height: 200px;
 }
                 </pre>
             </div>
