@@ -1,0 +1,90 @@
+/* General container using Grid */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        "header header"
+        "sidebar content";
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Header: Full-width at the top */
+.header {
+    grid-area: header;
+    background-color: #f8b400;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Sidebar: Stacked category list */
+.sidebar {
+    grid-area: sidebar;
+    background: lightgray;
+    padding: 20px;
+    font-size: 18px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+/* Sidebar list styles */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* FLEXBOX NAVBAR: Horizontal navigation */
+.flexbox-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #ffcccc;
+    padding: 15px;
+    border: 3px solid red;
+    border-radius: 10px;
+}
+
+/* Navbar links */
+.flexbox-navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: 10px;
+}
+
+/* FLEXBOX ARTICLES: Stacked news cards */
+.articles {
+    display: flex;
+    flex-direction: column; /* Cards stacked vertically */
+    justify-content: center;
+    align-items: center;
+    background: #ccffcc;
+    padding: 20px;
+    border: 3px solid green;
+    border-radius: 10px;
+}
+
+/* Individual news cards */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+}
