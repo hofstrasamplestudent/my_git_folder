@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox vs No Flexbox</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /* 🚫 WITHOUT FLEXBOX: Items are stacked poorly */
+        .no-flexbox {
+            background: #ffdddd;
+            padding: 20px;
+            border: 2px solid red;
+        }
+
+        .no-flexbox div {
+            background: #f99;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid darkred;
+        }
+
+        /* ✅ WITH FLEXBOX: Items are aligned neatly */
+        .flexbox {
+            display: flex;  /* Enables Flexbox */
+            flex-direction: row; /* Aligns items in a row */
+            justify-content: space-around; /* Even spacing */
+            background: #ddffdd;
+            padding: 20px;
+            border: 2px solid green;
+        }
+
+        .flexbox div {
+            background: #9f9;
+            padding: 15px;
+            border: 1px solid darkgreen;
+            text-align: center;
+            flex: 1; /* Makes all items equal size */
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🚫 Without Flexbox (Messy Layout)</h2>
+    <div class="no-flexbox">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <h2>✅ With Flexbox (Neatly Aligned)</h2>
+    <div class="flexbox">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+</body>
+</html>
