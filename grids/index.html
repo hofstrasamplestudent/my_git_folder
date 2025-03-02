@@ -7,21 +7,71 @@
     <link rel="stylesheet" href="styles.css"> <!-- Linking external CSS -->
 </head>
 <body>
+    <!-- Grid container: This is the main structure (House Blueprint) -->
     <div class="container">
-        <div class="header">🏠 House Structure (Grid Header)</div>
-        <div class="sidebar">📜 Sidebar</div>
-        <div class="content">
-            <div class="flexbox-section">
-                <p>🛋️ Flexbox Area 1</p>
-                <p>📦 Item 1</p>
-                <p>📦 Item 2</p>
-            </div>
-            <div class="flexbox-section">
-                <p>🖼️ Flexbox Area 2</p>
-                <p>🔳 Image Box</p>
-                <p>📝 Text Block</p>
-            </div>
+        
+        <!-- Header: Spans across both columns -->
+        <div class="header">
+            🏠 House Structure (Grid Header) <br>
+            (This spans across both columns in the grid)
         </div>
-    </div>
+
+        <!-- Sidebar: Fixed column for navigation or extra content -->
+        <div class="sidebar">
+            📜 Sidebar <br>
+            (This stays on the left side in a smaller column)
+        </div>
+
+        <!-- Content: A grid area that contains two Flexbox sections -->
+        <div class="content">
+            
+            <!-- Left Flexbox Section -->
+            <div class="flexbox-left">
+                <p>🛋️ Flexbox Left (Vertical Stack)</p>
+                <p>📦 Box 1</p>
+                <p>📦 Box 2</p>
+                
+                <!-- Displaying the CSS for this section -->
+                <pre>
+/* Flexbox Left Section: Stacks items vertically */
+.flexbox-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffcccc;
+    padding: 20px;
+    flex: 1;
+    border: 3px solid red;
+    border-radius: 10px;
+}
+                </pre>
+            </div>
+
+            <!-- Right Flexbox Section -->
+            <div class="flexbox-right">
+                <p>🖼️ Flexbox Right (Horizontal Alignment)</p>
+                <p>🔳 Image Block</p>
+                <p>📝 Text Block</p>
+
+                <!-- Displaying the CSS for this section -->
+                <pre>
+/* Flexbox Right Section: Aligns items in a row */
+.flexbox-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background: #ccffcc;
+    padding: 20px;
+    flex: 1;
+    border: 3px solid green;
+    border-radius: 10px;
+}
+                </pre>
+            </div>
+
+        </div> <!-- End of .content -->
+    </div> <!-- End of .container -->
 </body>
 </html>

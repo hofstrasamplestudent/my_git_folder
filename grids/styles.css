@@ -1,18 +1,18 @@
-/* Grid Layout */
+/* 📌 GRID CONTAINER (Overall House Blueprint) */
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr; /* Two columns: Sidebar (small) & Content (large) */
-    grid-template-rows: auto auto; /* Two rows: Header & Main content */
-    gap: 20px;
+    grid-template-columns: 1fr 3fr; /* Sidebar (small) | Content (large) */
+    grid-template-rows: auto auto; /* Header and Main Content */
+    gap: 20px; /* Adds space between grid items */
     padding: 20px;
     max-width: 900px;
     margin: auto;
     border: 3px solid black;
 }
 
-/* Header spans across both columns */
+/* 📌 HEADER (Spans both columns) */
 .header {
-    grid-column: span 2;
+    grid-column: span 2; /* Makes the header stretch across both columns */
     background-color: #f8b400;
     text-align: center;
     padding: 15px;
@@ -20,7 +20,7 @@
     font-weight: bold;
 }
 
-/* Sidebar */
+/* 📌 SIDEBAR (Left Section of the Grid) */
 .sidebar {
     background: lightgray;
     padding: 20px;
@@ -28,42 +28,58 @@
     text-align: center;
 }
 
-/* Content area using Flexbox */
+/* 📌 CONTENT SECTION (Uses Flexbox inside Grid) */
 .content {
     display: flex;
-    flex-direction: column; /* Stack flexbox sections vertically */
-    gap: 15px;
+    flex-direction: row; /* Flexbox used inside Grid */
+    justify-content: space-between;
+    align-items: center;
     background: lightblue;
     padding: 20px;
+    gap: 20px;
 }
 
-/* Flexbox container inside Grid */
-.flexbox-section {
+/* 📌 FLEXBOX LEFT: Stacks items VERTICALLY */
+.flexbox-left {
     display: flex;
-    flex-direction: row; /* Arrange items in a row */
-    justify-content: space-around;
+    flex-direction: column; /* Items are stacked in a column */
     align-items: center;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* Different background colors for each Flexbox section */
-.flexbox-section:nth-child(1) {
+    justify-content: space-between;
     background: #ffcccc; /* Light Red */
+    padding: 20px;
+    flex: 1; /* Takes up equal space in the content section */
+    border: 3px solid red;
+    border-radius: 10px;
 }
 
-.flexbox-section:nth-child(2) {
+/* 📌 FLEXBOX RIGHT: Aligns items HORIZONTALLY */
+.flexbox-right {
+    display: flex;
+    flex-direction: row; /* Items are aligned in a row */
+    align-items: center;
+    justify-content: space-around;
     background: #ccffcc; /* Light Green */
+    padding: 20px;
+    flex: 1; /* Takes up equal space in the content section */
+    border: 3px solid green;
+    border-radius: 10px;
 }
 
-/* Items inside Flexbox */
-.flexbox-section p {
+/* 📌 FLEXBOX ITEMS (Boxes inside Flexbox sections) */
+.flexbox-left p, .flexbox-right p {
     background: white;
     padding: 10px 15px;
     border-radius: 5px;
     text-align: center;
     border: 1px solid black;
+}
+
+/* 📌 CODE BLOCK STYLING (Displays CSS inside webpage) */
+pre {
+    background: black;
+    color: limegreen;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    overflow-x: auto;
 }
