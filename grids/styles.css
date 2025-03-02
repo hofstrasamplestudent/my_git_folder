@@ -1,21 +1,48 @@
+/* Grid Layout */
 .container {
     display: grid;
     grid-template-columns: 1fr 3fr; /* Two columns: sidebar (small) and content (large) */
-    grid-template-rows: auto auto; /* Header and main section */
+    grid-template-rows: auto auto; /* Two rows: header and main content */
     gap: 20px;
-  }
-  
-  .header {
-    grid-column: span 2; /* Header spans across both columns */
-  }
-  
-  .sidebar {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    border: 2px solid black;
+}
+
+/* Header spans across both columns */
+.header {
+    grid-column: span 2;
+    background-color: #f8b400;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
     background: lightgray;
-  }
-  
-  .content {
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Content area using Flexbox */
+.content {
     display: flex;
-    flex-direction: column; /* Arranging text and images inside */
+    flex-direction: column; /* Stack content vertically */
     justify-content: space-between;
-  }
-  
+    background: lightblue;
+    padding: 15px;
+    font-size: 18px;
+}
+
+/* Styling paragraphs inside content */
+.content p {
+    margin: 10px 0;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+}
