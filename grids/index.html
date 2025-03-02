@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="styles.css"> <!-- Linking external CSS -->
 </head>
 <body>
-    <!-- Grid container: Defines the main structure -->
+    <!-- Grid container -->
     <div class="container">
-        
+
         <!-- Header: Spans across both columns -->
         <div class="header">
-            🏠 Grid Header (Spans 2 Columns) <br>
-            <pre>
+            🏠 Grid Header (Spans 2 Columns)
+            <pre><code>
 /* Header spans across both columns */
 .header {
     grid-column: span 2;
@@ -23,13 +23,13 @@
     font-size: 22px;
     font-weight: bold;
 }
-            </pre>
+            </code></pre>
         </div>
 
-        <!-- Sidebar (Static Grid Area) -->
+        <!-- Sidebar -->
         <div class="sidebar">
-            📜 Sidebar - Static Grid Area <br>
-            <pre>
+            📜 Sidebar - Static Grid Area
+            <pre><code>
 /* Sidebar section */
 .sidebar {
     background: lightgray;
@@ -37,21 +37,20 @@
     font-size: 18px;
     text-align: center;
 }
-            </pre>
+            </code></pre>
         </div>
 
-        <!-- Main Content: Uses Flexbox Inside Grid -->
+        <!-- Main Content -->
         <div class="content">
-            
-            <!-- Flexbox Section 1: Horizontal Navbar -->
+
+            <!-- Flexbox Navbar -->
             <div class="flexbox-navbar">
                 <p>🔗 Navbar Example (Flexbox Row)</p>
                 <button>🏠 Home</button>
                 <button>📄 About</button>
                 <button>📞 Contact</button>
-               
-                <!-- Displaying CSS -->
-                <pre>
+                
+                <pre><code>
 /* Flexbox Navbar: Aligns buttons in a row */
 .flexbox-navbar {
     display: flex;
@@ -63,17 +62,17 @@
     border: 3px solid red;
     border-radius: 10px;
 }
-                </pre> <p>🔗  <a href="https://hofstrasamplestudent.github.io/my_git_folder/grids/flexOne.html">Sample Page</a> </p>
+                </code></pre>
+                <p>🔗 <a href="https://hofstrasamplestudent.github.io/my_git_folder/grids/flexOne.html">Sample Page</a></p>
             </div>
 
-            <!-- Flexbox Section 2: Card Layout -->
+            <!-- Flexbox Cards -->
             <div class="flexbox-cards">
                 <div class="card">🖼️ Image 1</div>
                 <div class="card">🖼️ Image 2</div>
                 <div class="card">🖼️ Image 3</div>
 
-                <!-- Displaying CSS -->
-                <pre>
+                <pre><code>
 /* Flexbox Cards: Distributes items evenly */
 .flexbox-cards {
     display: flex;
@@ -94,7 +93,7 @@
     border-radius: 5px;
     text-align: center;
 }
-                </pre>
+                </code></pre>
             </div>
 
         </div> <!-- End of .content -->
