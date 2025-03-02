@@ -1,0 +1,21 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Two columns: sidebar (small) and content (large) */
+    grid-template-rows: auto auto; /* Header and main section */
+    gap: 20px;
+  }
+  
+  .header {
+    grid-column: span 2; /* Header spans across both columns */
+  }
+  
+  .sidebar {
+    background: lightgray;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column; /* Arranging text and images inside */
+    justify-content: space-between;
+  }
+  
