@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox vs Grid vs Nested Grid</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /* 🚫 WITHOUT FLEXBOX: Items are stacked poorly */
+        .no-flexbox {
+            background: #ffdddd;
+            padding: 20px;
+            border: 2px solid red;
+        }
+
+        .no-flexbox div {
+            background: #f99;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid darkred;
+        }
+
+        /* ✅ WITH FLEXBOX: Items are aligned neatly */
+        .flexbox {
+            display: flex;  
+            flex-direction: row; 
+            justify-content: space-around; 
+            background: #ddffdd;
+            padding: 20px;
+            border: 2px solid green;
+        }
+
+        .flexbox div {
+            background: #9f9;
+            padding: 15px;
+            border: 1px solid darkgreen;
+            text-align: center;
+            flex: 1;
+            margin: 5px;
+        }
+
+        /* ✅✅ GRID + FLEXBOX: Best of both worlds */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr; 
+            gap: 20px;
+            background: #ddeeff;
+            padding: 20px;
+            border: 2px solid blue;
+        }
+
+        .sidebar {
+            background: #99bbff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .content-grid {
+            display: flex; 
+            flex-direction: column;
+            justify-content: center;
+            background: #bbddff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .article-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            margin-bottom: 10px;
+        }
+
+        .article-section div {
+            flex: 1; 
+            padding: 10px;
+            text-align: center;
+            background: #f4f4f4;
+            margin: 5px;
+        }
+
+        /* 🚫 NESTED GRID: Why it's not helpful */
+        .nested-grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background: #ffeecc;
+            padding: 20px;
+            border: 2px solid orange;
+        }
+
+        .nested-grid-item {
+            display: grid; /* Another grid inside grid */
+            grid-template-columns: 1fr;
+            padding: 15px;
+            background: #ffcc99;
+            text-align: center;
+            border: 1px solid #aa5500;
+        }
+
+        /* ✅ FLEXBOX IS BETTER */
+        .better-flexbox-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background: #ccffcc;
+            padding: 20px;
+            border: 2px solid darkgreen;
+        }
+
+        .better-flexbox-item {
+            flex: 1;
+            padding: 15px;
+            background: #88cc88;
+            text-align: center;
+            border: 1px solid #225522;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🚫 Without Flexbox (Messy Layout)</h2>
+    <div class="no-flexbox">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <h2>✅ With Flexbox (Neatly Aligned)</h2>
+    <div class="flexbox">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <h2>🔷 Grid + Flexbox (Best of Both)</h2>
+    <div class="grid-container">
+        <aside class="sidebar">
+            <h3>📌 Sidebar</h3>
+            <p>Some navigation links or categories.</p>
+        </aside>
+
+        <section class="content-grid">
+            <h3>📰 News Section</h3>
+
+            <div class="article-section">
+                <div>Headline 1: Breaking News</div>
+                <div>Headline 2: Market Update</div>
+                <div>Headline 3: Sports Highlights</div>
+            </div>
+
+            <div class="article-section">
+                <div>Headline 4: Science Discovery</div>
+                <div>Headline 5: Tech Trends</div>
+                <div>Headline 6: Entertainment Buzz</div>
+            </div>
+        </section>
+    </div>
+
+    <h2>🚫 Nested Grid (Bad Idea for Simple Alignments)</h2>
+    <div class="nested-grid-container">
+        <div class="nested-grid-item">Item 1</div>
+        <div class="nested-grid-item">Item 2</div>
+        <div class="nested-grid-item">Item 3</div>
+    </div>
+
+    <h2>✅ Flexbox is Better for Simple Alignments</h2>
+    <div class="better-flexbox-container">
+        <div class="better-flexbox-item">Item 1</div>
+        <div class="better-flexbox-item">Item 2</div>
+        <div class="better-flexbox-item">Item 3</div>
+    </div>
+
+</body>
+</html>

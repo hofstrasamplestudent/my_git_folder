@@ -1,0 +1,92 @@
+/* General container styling */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "header header"
+        "sidebar content";
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Header spans both columns */
+.header {
+    grid-area: header;
+    background-color: #f8b400;
+    text-align: center;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Sidebar section */
+.sidebar {
+    grid-area: sidebar;
+    background: lightgray;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Content section where both Flexbox examples exist */
+.content {
+    grid-area: content;
+}
+
+/* FLEXBOX NAVBAR: Displays items in a row */
+.flexbox-navbar {
+    display: flex; /* Enables Flexbox */
+    flex-direction: row; /* Items arranged in a row */
+    justify-content: space-evenly; /* Even spacing between items */
+    align-items: center; /* Aligns items vertically */
+    background: #ffcccc;
+    padding: 15px;
+    border: 3px solid red;
+    border-radius: 10px;
+}
+
+/* FLEXBOX CARDS: Displays items in a column */
+.flexbox-cards {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Items stacked vertically */
+    justify-content: center; /* Centers items in the column */
+    align-items: center; /* Aligns items horizontally */
+    background: #ccffcc;
+    padding: 20px;
+    border: 3px solid green;
+    border-radius: 10px;
+}
+
+/* Individual card items */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 10px; /* Adds space between cards */
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+/* Block-level div for explanation */
+.explanation-box {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Styled unordered list */
+.explanation-list {
+    background: #e6f7ff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #0077cc;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.explanation-list ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
