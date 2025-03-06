@@ -1,0 +1,77 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Header Box Model */
+h1 {
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid black;
+    width: 80%;
+    text-align: center;
+}
+
+/* Paragraph Styling */
+p {
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid gray;
+    background-color: #f0f0f0;
+}
+
+/* Overflow Demonstration */
+.overflow-box {
+    width: 300px;
+    height: 100px;
+    border: 2px solid red;
+    padding: 10px;
+    margin-top: 20px;
+    overflow: auto; /* Change this to hidden, scroll, or visible */
+}
+
+/* Display Experiment */
+h1 {
+    display: block; /* Change to inline, inline-block, or none */
+}
+
+/* Box Model Experiment */
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 150px;
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Visibility Experiment */
+.hidden-box {
+    width: 200px;
+    height: 50px;
+    background-color: yellow;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+    visibility: visible; /* Change this to hidden to see the difference */
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #ddd;
+}
