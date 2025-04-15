@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Semantic HTML with Named Grid Areas - Live Example</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background: #f9f9f9;
+      color: #333;
+      text-align: center;
+    }
+
+    /* Grid Container with Named Areas */
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "nav main"
+        "nav aside"
+        "footer footer";
+      grid-template-columns: 200px 1fr;
+      gap: 10px;
+      max-width: 800px;
+      margin: auto;
+      border: 2px solid #ccc;
+      padding: 10px;
+    }
+
+    /* Semantic Elements assigned to Grid Areas */
+    header {
+      grid-area: header;
+      background: lightblue;
+      padding: 10px;
+    }
+    nav {
+      grid-area: nav;
+      background: lightgray;
+      padding: 10px;
+    }
+    main {
+      grid-area: main;
+      background: white;
+      padding: 10px;
+    }
+    aside {
+      grid-area: aside;
+      background: lightcoral;
+      padding: 10px;
+    }
+    footer {
+      grid-area: footer;
+      background: lightgreen;
+      padding: 10px;
+    }
+
+    /* Code Display Styles */
+    .code-container {
+      background: #000;
+      color: #0f0;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .code-container h2 {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Semantic HTML with Named Grid Areas</h1>
+  <p>This live example uses semantic HTML elements combined with CSS Grid named areas to create a flexible layout. Below you can see both the live website and its HTML/CSS code.</p>
+  
+  <!-- Live Website Preview -->
+  <div class="container">
+    <header>
+      <h1>Website Header</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Main Content</h2>
+      <p>This is the main content area. Notice how the semantic <code>&lt;main&gt;</code> element is assigned to the "main" grid area.</p>
+    </main>
+    <aside>
+      <h2>Sidebar</h2>
+      <p>This sidebar provides additional information and is placed using its named grid area.</p>
+    </aside>
+    <footer>
+      <p>Website Footer</p>
+    </footer>
+  </div>
+  
+  <!-- HTML Code Display -->
+  <div class="code-container">
+    <h2>HTML Code:</h2>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;Semantic HTML with Named Grid Areas&lt;/title&gt;
+  &lt;style&gt;
+    /* CSS code here */
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    &lt;header&gt;
+      &lt;h1&gt;Website Header&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;main&gt;
+      &lt;h2&gt;Main Content&lt;/h2&gt;
+      &lt;p&gt;This is the main content area.&lt;/p&gt;
+    &lt;/main&gt;
+    &lt;aside&gt;
+      &lt;h2&gt;Sidebar&lt;/h2&gt;
+      &lt;p&gt;Additional info here.&lt;/p&gt;
+    &lt;/aside&gt;
+    &lt;footer&gt;
+      &lt;p&gt;Website Footer&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+  </div>
+  
+  <!-- CSS Code Display -->
+  <div class="code-container">
+    <h2>CSS Code:</h2>
+    <pre>
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  background: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "nav aside"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  gap: 10px;
+  max-width: 800px;
+  margin: auto;
+  border: 2px solid #ccc;
+  padding: 10px;
+}
+header {
+  grid-area: header;
+  background: lightblue;
+  padding: 10px;
+}
+nav {
+  grid-area: nav;
+  background: lightgray;
+  padding: 10px;
+}
+main {
+  grid-area: main;
+  background: white;
+  padding: 10px;
+}
+aside {
+  grid-area: aside;
+  background: lightcoral;
+  padding: 10px;
+}
+footer {
+  grid-area: footer;
+  background: lightgreen;
+  padding: 10px;
+}
+    </pre>
+  </div>
+  
+</body>
+</html>
