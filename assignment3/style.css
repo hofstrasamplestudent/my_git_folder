@@ -30,7 +30,10 @@ p {
 
 /* Footer styling */
 footer {
-  background-color: #ccc;
-  padding: 10px;
+  background-color: #e38d8d;
+  padding: 30px;
+  margin: 50px;
   text-align: center;
+  border: 12px solid red;
+
 }
